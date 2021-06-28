@@ -7,4 +7,5 @@ Run the command 'pip install' in the project
 
 ### Pages to Practice
 POMDemo: Tets for http://automationpractice.com/
+
 Store: Test for https://automationteststore.com/

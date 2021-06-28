@@ -1,4 +1,5 @@
 import unittest
+import time
 from selenium.webdriver.common.by import By
 
 class CreateAccountPage(unittest.TestCase):
@@ -16,7 +17,7 @@ class CreateAccountPage(unittest.TestCase):
     COUNTRY = (By.ID, 'AccountFrm_country_id')
     LOGIN_NAME = (By.ID, 'AccountFrm_loginname')
     PASSWORD = (By.ID, 'AccountFrm_password')
-    PASSWORD_CONFIRM = (By.ID, 'AccountFrm_password')
+    PASSWORD_CONFIRM = (By.ID, 'AccountFrm_confirm')
     BTN_CONTINUE = (By.CSS_SELECTOR, 'button[title="Continue"]')
     NEWSLETTER_NO = (By.ID, 'AccountFrm_newsletter0')
     POLICY = (By.ID, 'AccountFrm_agree')
@@ -32,18 +33,19 @@ class CreateAccountPage(unittest.TestCase):
         self.driver.find_element(*self.FAX).send_keys(fax)
 
     def addressDetails(self, company, address1, address2, city, region, zipcode, country):
+        self.driver.find_element(*self.COUNTRY).send_keys(country)
         self.driver.find_element(*self.COMPANY).send_keys(company)
         self.driver.find_element(*self.ADDRESS1).send_keys(address1)
         self.driver.find_element(*self.ADDRESS2).send_keys(address2)
         self.driver.find_element(*self.CITY).send_keys(city)
-        self.driver.find_element(*self.COUNTRY).send_keys(country)
         self.driver.find_element(*self.ZIP_CODE).send_keys(zipcode)
+        time.sleep(2)
         self.driver.find_element(*self.REGION_STATE).send_keys(region)
 
     def login(self, login, password):
         self.driver.find_element(*self.LOGIN_NAME).send_keys(login)
         self.driver.find_element(*self.PASSWORD).send_keys(password)
-        self.driver.find_element(*self.PASSWORD_CONFIRM).send_keys(password+'2')
+        self.driver.find_element(*self.PASSWORD_CONFIRM).send_keys(password)
         self.driver.find_element(*self.NEWSLETTER_NO).click()
         self.driver.find_element(*self.POLICY).click()
         self.driver.find_element(*self.BTN_CONTINUE).click()

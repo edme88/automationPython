@@ -28,5 +28,4 @@ class registerTests(unittest.TestCase):
         ## Step 3: Complete Register Information
         create_account.personalDetails('Agus', 'Alici', 'agustina.aliciardi@darwoft.com', '358 4256985', '358 4256985')
         create_account.addressDetails('Darwoft', 'Jujuy 1214', 'West Loop South', 'Cordoba', 'Cordoba', '5000', 'Argentina')
-        create_account.login('agusDarwoft', 'automation')
-        time.sleep(2000)
+        create_account.login('agusDarwoft', '')
