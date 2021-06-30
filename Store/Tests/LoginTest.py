@@ -26,6 +26,7 @@ class loginTests(unittest.TestCase):
 
         ## Step 3: Invalid Login, no login and pass
         assert 'Error: Incorrect login or password provided.' in login_page.checkErrorMsg()
+        print('TEST: Invalid Login - No User - No Pass')
 
     def test_login(self):
         index_page = IndexPage(self.driver)
@@ -37,8 +38,8 @@ class loginTests(unittest.TestCase):
         time.sleep(2)
 
         ## Step 2: Complete user and pass
-        login_page.login('agusDarwoft', '')
+        login_page.login('agusDarwoft', 'automation')
 
         ## Step 3: Check My Account Page
         assert myAccount_page.checkTitle() == 'MY ACCOUNT'
-        print('Check My Account')
+        print('TEST: Valid Login - Check My Account title')
