@@ -4,6 +4,7 @@ Automation test with Python and Selenium
 ### How to start?
 Remember to download chromedriver.exe to a 'Drivers' folder in the root.
 Run the command 'pip install' in the project
+Run the command 'pip install html-testRunner'
 
 Pluing recomended: [Ranorex Selocity](https://chrome.google.com/webstore/detail/ranorex-selocity/ocgghcnnjekfpbmafindjmijdpopafoe)
 

@@ -1,9 +1,14 @@
-import time
-import unittest
 from selenium import webdriver
+import unittest
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
+
+import time
 from Store.Pages.IndexPage import IndexPage
 from Store.Pages.LoginOrRegister import LoginOrRegisterPage
 from Store.Pages.CreateAccountPage import CreateAccountPage
+import HtmlTestRunner
 
 class registerTests(unittest.TestCase):
     def setUp(self):
@@ -109,3 +114,7 @@ class registerTests(unittest.TestCase):
         assert create_account.checkErrorMsgPasswordConfirm() == 'Password confirmation does not match password!'
         print(create_account.checkErrorMsgPasswordConfirm())
         print('TEST: CREATE ACCOUNT PAGE - Long text - Check message error: login name not available & password not match')
+
+if __name__ == '__main__':
+    if __name__ == '__main__':
+        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)

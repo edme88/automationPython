@@ -1,9 +1,14 @@
-import time
-import unittest
 from selenium import webdriver
+import unittest
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
+
+import time
 from Store.Pages.IndexPage import IndexPage
 from Store.Pages.LoginOrRegister import LoginOrRegisterPage
 from Store.Pages.MyAccountPage import MyAccountPage
+import HtmlTestRunner
 
 class loginTests(unittest.TestCase):
     def setUp(self):
@@ -43,3 +48,7 @@ class loginTests(unittest.TestCase):
         ## Step 3: Check My Account Page
         assert myAccount_page.checkTitle() == 'MY ACCOUNT'
         print('TEST: Valid Login - Check My Account title')
+
+if __name__ == '__main__':
+    if __name__ == '__main__':
+        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)
