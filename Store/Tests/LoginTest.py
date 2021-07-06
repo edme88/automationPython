@@ -11,12 +11,12 @@ from Store.Pages.MyAccountPage import MyAccountPage
 import HtmlTestRunner
 
 class loginTests(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Chrome("../../Drivers/chromedriver.exe")
-        self.driver.implicitly_wait(10)
-        self.driver.get("https://automationteststore.com/")
-        self.driver.fullscreen_window()
-        #driver.maximize_window()
+    @classmethod
+    def setUp(cls):
+        cls.driver = webdriver.Chrome("../../Drivers/chromedriver.exe")
+        cls.driver.implicitly_wait(10)
+        cls.driver.get("https://automationteststore.com/")
+        cls.driver.maximize_window()
 
     def test_invalid_login_noUser_noPass(self):
         index_page = IndexPage(self.driver)
@@ -48,6 +48,12 @@ class loginTests(unittest.TestCase):
         ## Step 3: Check My Account Page
         assert myAccount_page.checkTitle() == 'MY ACCOUNT'
         print('TEST: Valid Login - Check My Account title')
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        print("Test Completed")
 
 if __name__ == '__main__':
     if __name__ == '__main__':

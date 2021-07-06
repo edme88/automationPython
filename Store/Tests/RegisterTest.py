@@ -11,11 +11,12 @@ from Store.Pages.CreateAccountPage import CreateAccountPage
 import HtmlTestRunner
 
 class registerTests(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Chrome("../../Drivers/chromedriver.exe")
-        self.driver.implicitly_wait(10)
-        self.driver.get("https://automationteststore.com/")
-        self.driver.fullscreen_window()
+    @classmethod
+    def setUp(cls):
+        cls.driver = webdriver.Chrome("../../Drivers/chromedriver.exe")
+        cls.driver.implicitly_wait(10)
+        cls.driver.get("https://automationteststore.com/")
+        cls.driver.maximize_window()
 
     def test_registration_fields_incomplete(self):
         index_page = IndexPage(self.driver)
@@ -114,6 +115,12 @@ class registerTests(unittest.TestCase):
         assert create_account.checkErrorMsgPasswordConfirm() == 'Password confirmation does not match password!'
         print(create_account.checkErrorMsgPasswordConfirm())
         print('TEST: CREATE ACCOUNT PAGE - Long text - Check message error: login name not available & password not match')
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
+        print("Test Completed")
 
 if __name__ == '__main__':
     if __name__ == '__main__':
