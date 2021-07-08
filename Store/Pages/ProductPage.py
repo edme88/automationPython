@@ -6,6 +6,9 @@ class ProductPage(unittest.TestCase):
     COLOR = (By.ID, 'option305')
     QTY = (By.ID, 'product_quantity')
     BTN_CART = (By.CLASS_NAME, 'cart')
+    PRODUCT_TITLE = (By.TAG_NAME, 'h1')
+    UNIT_PRICE = (By.CLASS_NAME, 'productprice')
+    TOTAL_PRICE = (By.CSS_SELECTOR, '.total-price-holder span')
 
     def __init__(self, driver):
         self.driver = driver
@@ -19,3 +22,12 @@ class ProductPage(unittest.TestCase):
 
     def clickCart(self):
         self.driver.find_element(*self.BTN_CART).click()
+
+    def checkTitle(self):
+        return self.driver.find_element(*self.PRODUCT_TITLE).text
+
+    def checkUnitPrice(self, price):
+        assert price in self.driver.find_element(*self.UNIT_PRICE).text
+
+    def checkTotalPrice(self, price):
+        assert price in self.driver.find_element(*self.TOTAL_PRICE).text
