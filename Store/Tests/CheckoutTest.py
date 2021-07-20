@@ -40,6 +40,11 @@ class loginTests(unittest.TestCase):
         ## Step 2: Complete user and pass
         login_page.login('agusDarwoft', 'automation')
 
+        ##Go to cart and Clean
+        menu_page.clickCart()
+        'document.querySelector(".table-striped tbody").childElementCount'
+        '.table-striped tr:nth-of-type(2) td:nth-child(7)'
+
         ## Step 3: Click MakeUp Menu
         menu_page.clickMenuMakeUp()
 
@@ -106,13 +111,11 @@ class loginTests(unittest.TestCase):
         time.sleep(10)
         assert 'YOUR ORDER HAS BEEN PROCESSED!' in confirmation_page.getTitle()
 
-    """
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
         cls.driver.quit()
-        print("Test Completed")"""
+        print("Test Completed")
 
 if __name__ == '__main__':
-    if __name__ == '__main__':
-        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)

@@ -123,5 +123,4 @@ class registerTests(unittest.TestCase):
         print("Test Completed")
 
 if __name__ == '__main__':
-    if __name__ == '__main__':
-        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)

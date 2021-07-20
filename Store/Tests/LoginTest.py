@@ -9,6 +9,7 @@ from Store.Pages.IndexPage import IndexPage
 from Store.Pages.LoginOrRegister import LoginOrRegisterPage
 from Store.Pages.MyAccountPage import MyAccountPage
 import HtmlTestRunner
+import json
 
 class loginTests(unittest.TestCase):
     @classmethod
@@ -43,7 +44,10 @@ class loginTests(unittest.TestCase):
         time.sleep(2)
 
         ## Step 2: Complete user and pass
-        login_page.login('agusDarwoft', 'automation')
+        #login_page.login('agusDarwoft', 'automation')
+        f = open('../Data/UserData.json',)
+        data = json.load(f)
+        login_page.login(data["name"], data["password"])
 
         ## Step 3: Check My Account Page
         assert myAccount_page.checkTitle() == 'MY ACCOUNT'
@@ -56,5 +60,4 @@ class loginTests(unittest.TestCase):
         print("Test Completed")
 
 if __name__ == '__main__':
-    if __name__ == '__main__':
-        unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="../Reports/"), verbosity=2)

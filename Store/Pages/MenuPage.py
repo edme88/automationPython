@@ -11,6 +11,7 @@ class MenuPage(unittest.TestCase):
     MENU_MEN = (By.CSS_SELECTOR, '.categorymenu > li:nth-of-type(6) > a')
     MENU_HAIR_CARE = (By.CSS_SELECTOR, '.categorymenu > li:nth-of-type(7) > a')
     MENU_BOOKS = (By.CSS_SELECTOR, '.categorymenu > li:nth-of-type(8) > a')
+    CART = (By.CSS_SELECTOR, 'ul[id="main_menu_top"] li[data-id="menu_cart"]')
 
     def __init__(self, driver):
         self.driver = driver
@@ -41,3 +42,6 @@ class MenuPage(unittest.TestCase):
 
     def clickMenuBooks(self):
         self.driver.find_element(*self.MENU_BOOKS).click()
+
+    def clickCart(self):
+        self.driver.find_element(*self.CART).click()
