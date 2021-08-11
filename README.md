@@ -32,3 +32,5 @@ Pluing recomended: [Ranorex Selocity](https://chrome.google.com/webstore/detail/
 > cd Store
 > cd Tests
 > pytest LoginTest.py RegisterTest.py
+
+## Folder tests for course https://testautomationu.applitools.com/behavior-driven-python-with-pytest-bdd/
