@@ -1,2 +1,8 @@
 .idea
 Drivers
+tests/step_defs/.pytest_cache
+tests/step_defs/__pycache__/
+tests/step_defs/geckodriver.log
+geckodriver.log
+output.json
+pytest_html_report.html
