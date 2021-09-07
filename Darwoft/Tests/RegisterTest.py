@@ -5,9 +5,9 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 
 import time
-from Store.Pages.IndexPage import IndexPage
-from Store.Pages.LoginOrRegister import LoginOrRegisterPage
-from Store.Pages.CreateAccountPage import CreateAccountPage
+from Darwoft.Pages.IndexPage import IndexPage
+from Darwoft.Pages.LoginOrRegister import LoginOrRegisterPage
+from Darwoft.Pages.CreateAccountPage import CreateAccountPage
 import HtmlTestRunner
 
 class registerTests(unittest.TestCase):

@@ -5,14 +5,14 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__),"..",".."))
 
 import time
-from Store.Pages.IndexPage import IndexPage
-from Store.Pages.LoginOrRegister import LoginOrRegisterPage
-from Store.Pages.MenuPage import MenuPage
-from Store.Pages.MakeUpPage import MakeUpPage
-from Store.Pages.ProductPage import ProductPage
-from Store.Pages.ShoppingCartPage import ShoppingCartPage
-from Store.Pages.CheckoutConfirmation import CheckoutConfirmationPage
-from Store.Pages.ConfirmationPage import ConfirmationPage
+from Darwoft.Pages.IndexPage import IndexPage
+from Darwoft.Pages.LoginOrRegister import LoginOrRegisterPage
+from Darwoft.Pages.MenuPage import MenuPage
+from Darwoft.Pages.MakeUpPage import MakeUpPage
+from Darwoft.Pages.ProductPage import ProductPage
+from Darwoft.Pages.ShoppingCartPage import ShoppingCartPage
+from Darwoft.Pages.CheckoutConfirmation import CheckoutConfirmationPage
+from Darwoft.Pages.ConfirmationPage import ConfirmationPage
 import HtmlTestRunner
 
 class loginTests(unittest.TestCase):

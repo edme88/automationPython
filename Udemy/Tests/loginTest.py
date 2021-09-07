@@ -1,9 +1,9 @@
 import time
 import unittest
 from selenium import webdriver
-from POMDemo.Pages.IndexPage import IndexPage
-from POMDemo.Pages.LoginPage import LoginPage
-from POMDemo.Pages.MyAccountPage import MyAccountPage
+from Udemy.Pages.IndexPage import IndexPage
+from Udemy.Pages.LoginPage import LoginPage
+from Udemy.Pages.MyAccountPage import MyAccountPage
 
 
 class loginTests(unittest.TestCase):

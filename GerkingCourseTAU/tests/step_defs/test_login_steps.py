@@ -37,3 +37,6 @@ def check_title(browser):
 @then("Error in Login")
 def check_error_title(browser):
     assert 'Error: Incorrect login or password provided.' in browser.find_element_by_css_selector('div.alert-error').text
+
+#http://thetestingworldapi.com/Help
+#https://reqres.in/
