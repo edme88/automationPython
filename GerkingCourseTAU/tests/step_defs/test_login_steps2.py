@@ -3,7 +3,6 @@ from pytest_bdd import scenarios, given, when, then, parsers
 from selenium import webdriver
 from Udemy.Pages.IndexPage import IndexPage
 from Udemy.Pages.LoginPage import LoginPage
-from Udemy.Pages.MyAccountPage import MyAccountPage
 
 # Constants
 STORE_HOME = 'https://automationteststore.com/'
