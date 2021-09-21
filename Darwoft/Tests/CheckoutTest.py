@@ -23,7 +23,7 @@ class loginTests(unittest.TestCase):
         cls.driver.get("https://automationteststore.com/")
         cls.driver.maximize_window()
 
-    def test_login(self):
+    def checkout_flow_with_product(self):
         index_page = IndexPage(self.driver)
         login_page = LoginOrRegisterPage(self.driver)
         menu_page = MenuPage(self.driver)

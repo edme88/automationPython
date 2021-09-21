@@ -9,6 +9,7 @@ class HeaderPageLocators():
     PRODUCT_TITLE = (By.CLASS_NAME, 'bgnone')
     CHECKOUT_BTN = (By.CSS_SELECTOR, 'ul#main_menu_top li[data-id="menu_checkout"]')
     WELCOMEBACK_BTN = (By.CLASS_NAME, 'menu_text')
+    LOGIN_REGISTER_BTN = (By.CSS_SELECTOR, 'ul#customer_menu_top>li>a')
 
 class HeaderPage():
 
@@ -29,3 +30,6 @@ class HeaderPage():
 
     def getWelcomeBackBtn(self):
         return self.driver.find_element(*HeaderPageLocators.WELCOMEBACK_BTN)
+
+    def getLoginRegisterBtn(self):
+        return self.driver.find_element(*HeaderPageLocators.LOGIN_REGISTER_BTN)
