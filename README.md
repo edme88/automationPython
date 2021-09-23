@@ -42,6 +42,8 @@ Scenarios:
   * Not found a product during search
 * Wishlist
   * Add product to wishlist and check
+* ContactUs
+  * Send a contactUs message and check text
 
 ### Course: Darwoft
 Scenarios:
@@ -63,3 +65,5 @@ Scenarios:
   * test_invalid_without_password
   * test_valid_login
   * test_try_create_account
+
+## TAREA

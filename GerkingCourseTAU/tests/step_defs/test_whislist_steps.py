@@ -6,7 +6,6 @@ from GerkingCourseTAU.Pages.ProductPage import ProductPage
 from GerkingCourseTAU.Pages.LoginPage import LoginPage
 from GerkingCourseTAU.Pages.WishlistPage import WishlistPage
 from GerkingCourseTAU.Pages.AccountPage import AccountPage
-from selenium.common.exceptions import NoSuchElementException
 
 # Constants
 STORE_HOME = 'https://automationteststore.com/'
@@ -71,7 +70,7 @@ def product_in_wishlist(browser, productName):
 
     print(wishlist_page.getTableWish().text)
     assert productName in wishlist_page.getTableWish().text
-    print(productName+'is in'+wishlist_page.getTableWish().text)
+    print(productName+'is in '+wishlist_page.getTableWish().text)
 
 
 
