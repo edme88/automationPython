@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class ContactUsPageLocators():
+class ContactUsPageLocators:
     CONFIRMATION_TEXT = (By.CSS_SELECTOR, 'section.mb40 p:nth-of-type(2)')
     NAME_INPUT = (By.ID, 'ContactUsFrm_first_name')
     NAME_ERROR = (By.CSS_SELECTOR, '#field_11 .element_error')
@@ -11,7 +11,8 @@ class ContactUsPageLocators():
     TEXT_ERROR = (By.CSS_SELECTOR, '#field_13 .element_error')
     SUBMIT_BTN = (By.CSS_SELECTOR, 'button[title="Submit"]')
 
-class ContactUsPage():
+
+class ContactUsPage:
 
     def __init__(self, driver):
         self.driver = driver

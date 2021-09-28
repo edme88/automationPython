@@ -6,6 +6,7 @@ class LoginPageLocators():
     PASSWORD_INPUT = (By.ID, 'loginFrm_password')
     LOGIN_BTN = (By.CSS_SELECTOR, 'button[title="Login"]')
 
+
 class LoginPage():
 
     def __init__(self, driver):
