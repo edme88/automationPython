@@ -9,6 +9,7 @@ Run the command
 * pip install html-testRunner
 * pip install pytest-html-reporter
 * pip install pytest-html
+* pip install -U pytest
 
 Pluing recomended: [Ranorex Selocity](https://chrome.google.com/webstore/detail/ranorex-selocity/ocgghcnnjekfpbmafindjmijdpopafoe)
 

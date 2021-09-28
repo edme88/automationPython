@@ -1,4 +1,4 @@
-@checkout
+@checkout @regression
 Feature: Buy in the Store and check order ID
   As a user
   I want to buy a product in the Store
