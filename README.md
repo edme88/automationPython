@@ -33,8 +33,14 @@ python -m pytest -k "login"
 
 ### Course: TAU
 Scenarios:
+* Cart Dropdown
+  * See 2 products names in cart dropdown
+  * See price in Dollars of 2 products in cart dropdown
+  * See price in Euros of 2 products in cart dropdown
 * Checkout
   * Buy in the Store and check order ID
+* ContactUs
+  * Send a contactUs message and check text
 * Login
   * Login in Store Page correctly
   * Error in Login
@@ -43,8 +49,6 @@ Scenarios:
   * Not found a product during search
 * Wishlist
   * Add product to wishlist and check
-* ContactUs
-  * Send a contactUs message and check text
 
 ### Course: Darwoft
 Scenarios:
@@ -68,3 +72,11 @@ Scenarios:
   * test_try_create_account
 
 ## TAREA
+* Listo (/)
+
+----
+## Otros Escenarios
+* Presionar la lupa, buscar por categoría, checkbox
+* Escribr review de un producto
+* Si el producto está "Out of Stock" no se ve el add to cart
+* Descargar PDF de un producto
