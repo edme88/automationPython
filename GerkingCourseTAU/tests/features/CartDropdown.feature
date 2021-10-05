@@ -24,3 +24,8 @@ Feature: Add 2 products and check dropdown cart
     And do a mouse over the cart dropdown
     Then the product prices are ("35.19", "35.66"), subtotal "70.85" and total "70.85" in "€"
 
+  @CartDropdownPriceLibras
+  Scenario: See price in Libras of 2 products in cart dropdown
+    When select Libras
+    And do a mouse over the cart dropdown
+    Then the product prices are ("29.75", "30.15"), subtotal "59.90" and total "59.90" in "£"

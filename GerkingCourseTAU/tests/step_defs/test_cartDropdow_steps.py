@@ -52,13 +52,23 @@ def move_over_cart_dropdown(browser):
 
 
 @when('select Euro')
-def move_over_cart_dropdown(browser):
+def select_euro(browser):
     header_page = HeaderPage(browser)
 
     hover = ActionChains(browser).move_to_element(header_page.getCurrency())
     hover.perform()
     header_page.getSelectEuro().click()
     print('Select Euro')
+
+
+@when('select Libras')
+def select_libras(browser):
+    header_page = HeaderPage(browser)
+
+    hover = ActionChains(browser).move_to_element(header_page.getCurrency())
+    hover.perform()
+    header_page.getSelectLibras().click()
+    print('Select Libras')
 
 
 # Then Steps

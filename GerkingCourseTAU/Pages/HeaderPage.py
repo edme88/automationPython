@@ -19,6 +19,7 @@ class HeaderPageLocators:
     ## CURRENCY
     CURRENCY = (By.CSS_SELECTOR, 'ul.language>li>a')
     EURO = (By.CSS_SELECTOR, 'ul.currency li:nth-of-type(1)>a')
+    LIBRAS = (By.CSS_SELECTOR, 'ul.currency li:nth-of-type(2)>a')
 
 
 class HeaderPage:
@@ -72,3 +73,6 @@ class HeaderPage:
 
     def getSelectEuro(self):
         return self.driver.find_element(*HeaderPageLocators.EURO)
+
+    def getSelectLibras(self):
+        return self.driver.find_element(*HeaderPageLocators.LIBRAS)
