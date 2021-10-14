@@ -1,3 +1,5 @@
+*.pyc
+
 ## Configuration
 .idea
 
@@ -6,10 +8,9 @@ Drivers
 
 ## Logs
 GerkingCourseTAU/tests/step_defs/.pytest_cache
-GerkingCourseTAU/tests/step_defs/__pycache__/
 GerkingCourseTAU/tests/step_defs/geckodriver.log
 geckodriver.log
-__pycache__/
+
 
 ## OCR Program
 OCR

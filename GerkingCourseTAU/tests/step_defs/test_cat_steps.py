@@ -1,5 +1,6 @@
 import requests
-from pytest_bdd import scenarios, given, when, then, parsers
+from pytest_bdd import scenarios, given, then, parsers
+from colorama import Fore, Back, Style
 
 # Constants
 CAT_API = 'https://catfact.ninja/'
@@ -7,25 +8,21 @@ CAT_API = 'https://catfact.ninja/'
 # Scenarios
 scenarios('../features/Cat.feature')
 
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Firefox()
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
-
 # Given Steps
-@given('the endpoint')
-def do_get_no_params(browser):
-    browser.get(CAT_API)
-
-@when('send the max length "180"')
-def do_get(browser, len):
-    params = {'len': len, 'format': 'json'}
-    response = requests.get(CAT_API, params)
+@given(parsers.parse('the endpoint call "{urlEndpoint}"'), target_fixture='do_get')
+def do_get(urlEndpoint):
+    params = {'format': 'json'}
+    response = requests.get(CAT_API + urlEndpoint)
+    print(Fore.GREEN+'Complete Response: '+response.text)
+    print(response.text)
+    json_response = response.json()
+    oneFact = json_response['fact']
+    print(Back.BLUE+Fore.BLACK+Style.BRIGHT+'Print only the fact: '+oneFact)
     return response
 
+
+# Then Steps
 @then(parsers.parse('obtain a fact code "{code:d}"'))
 def verify(do_get, code):
     assert do_get.status_code == code
+    print(Back.RESET+Fore.RESET+Style.DIM+'Successful response')

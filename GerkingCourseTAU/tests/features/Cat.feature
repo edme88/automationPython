@@ -4,10 +4,7 @@ Feature: Get a fact about cat
   I want to get a fact
   So the service is working correctly
 
-  Background:
-    Given the endpoint
-
   @catFact
-  Scenario: Get a fact about cat
-    When send the max length "180"
+  Scenario: Get a fact about cat and check response
+    Given the endpoint call "/fact"
     Then obtain a fact code "200"
