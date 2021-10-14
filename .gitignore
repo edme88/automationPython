@@ -11,6 +11,9 @@ GerkingCourseTAU/tests/step_defs/geckodriver.log
 geckodriver.log
 __pycache__/
 
+## OCR Program
+OCR
+
 ## Reports
 output.json
 pytest_html_report.html

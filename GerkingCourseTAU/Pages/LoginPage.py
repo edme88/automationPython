@@ -7,8 +7,7 @@ class LoginPageLocators():
     LOGIN_BTN = (By.CSS_SELECTOR, 'button[title="Login"]')
 
 
-class LoginPage():
-
+class LoginPage:
     def __init__(self, driver):
         self.driver = driver
 

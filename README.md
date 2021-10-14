@@ -10,6 +10,8 @@ Run the command
 * pip install pytest-html-reporter
 * pip install pytest-html
 * pip install -U pytest
+* pip install pytesseract
+* python -m pip install requests
 
 Pluing recomended: [Ranorex Selocity](https://chrome.google.com/webstore/detail/ranorex-selocity/ocgghcnnjekfpbmafindjmijdpopafoe)
 
@@ -37,6 +39,7 @@ Scenarios:
   * See 2 products names in cart dropdown
   * See price in Dollars of 2 products in cart dropdown
   * See price in Euros of 2 products in cart dropdown
+  * See price in Libras of 2 products in cart dropdown
 * Checkout
   * Buy in the Store and check order ID
 * ContactUs
@@ -77,6 +80,9 @@ Scenarios:
 ----
 ## Otros Escenarios
 * Presionar la lupa, buscar por categoría, checkbox
-* Escribr review de un producto
+* Escribr review de un producto //https://towardsdatascience.com/how-to-extract-text-from-images-with-python-db9b87fe432b
+  * Verificar error: Error: Review Text must be between 25 and 1000 characters!
+  * Verificar error: Human verification has failed! Please try again.
+  * Thank you for your review. It has been submitted to the webmaster for approval.
 * Si el producto está "Out of Stock" no se ve el add to cart
 * Descargar PDF de un producto
