@@ -29,6 +29,7 @@ def browser():
 def go_login_page(browser):
     browser.get(STORE_HOME)
 
+
 # When Steps
 @when(parsers.parse('search "{product}"'))
 @when('search "<product>"')
@@ -37,7 +38,9 @@ def search_productName(browser, product):
     header_page.getSearchInput().send_keys(product)
     header_page.getSearchButton().click()
 
+
 # Then Steps
+@then(parsers.cfparse('check the quantity "{qty:Number}"  in the bottom bar', extra_types=dict(Number=int)))
 @then(parsers.parse('check the quantity "{qty}"  in the bottom bar'))
 @then('check the quantity "<qty>"  in the bottom bar')
 def check_productQty(browser, qty):
@@ -45,5 +48,5 @@ def check_productQty(browser, qty):
 
     completeText = search_page.getSearchBarBottom().text
     qtyProduct = completeText.split()[-1]
-    assert int(qty) == int(qtyProduct)
+    assert int(qty) == int(qtyProduct) #if we use the parse with the type, the int(qty) is not necesary
     print('Quantity is '+str(qty))

@@ -20,7 +20,6 @@ def do_get(urlEndpoint):
     print(Back.BLUE+Fore.BLACK+Style.BRIGHT+'Print only the fact: '+oneFact)
     return response
 
-
 # Then Steps
 @then(parsers.parse('obtain a fact code "{code:d}"'))
 def verify(do_get, code):

@@ -9,6 +9,9 @@ class ProductPageLocators:
     ADD_TO_CART = (By.CSS_SELECTOR, 'div.jumbotron a[data-id="74"]')
     ADD_TO_WISHLIST = (By.CLASS_NAME, 'wishlist_add')
     ADD_TO_CART_BTN = (By.CSS_SELECTOR, 'ul.productpagecart a')
+    PRINT_BTN = (By.CLASS_NAME, 'productprint')
+    SAVE_BTN = (By.CSS_SELECTOR, 'cr-button.action-button')
+    OUT_STOCK = (By.CLASS_NAME, 'nostock')
     ## REVIEW
     REVIEW_TAB = (By.CSS_SELECTOR, 'ul#myTab li:nth-of-type(2)')
     NAME_INPUT = (By.ID, 'name')
@@ -32,6 +35,15 @@ class ProductPage:
 
     def getAddToCartBtn(self):
         return self.driver.find_element(*ProductPageLocators.ADD_TO_CART_BTN)
+
+    def getPrintBtn(self):
+        return self.driver.find_element(*ProductPageLocators.PRINT_BTN)
+
+    def getSaveBtn(self):
+        return self.driver.find_element(*ProductPageLocators.SAVE_BTN)
+
+    def getOutStock(self):
+        return self.driver.find_element(*ProductPageLocators.OUT_STOCK)
 
     ## REVIEW
     def getReviewTab(self):

@@ -6,6 +6,7 @@ Remember to download chromedriver.exe to a 'Drivers' folder in the root.
 
 Run the command 
 * pip install
+* pip install pytest-bdd
 * pip install html-testRunner
 * pip install pytest-html-reporter
 * pip install pytest-html
@@ -15,6 +16,8 @@ Run the command
 
 Pluing recomended: [Ranorex Selocity](https://chrome.google.com/webstore/detail/ranorex-selocity/ocgghcnnjekfpbmafindjmijdpopafoe)
 
+### To generate a new file with requirements
+pip freeze > requirements.txt
 
 ### Pages to Practice
 - POMDemo: Tets for http://automationpractice.com/
@@ -94,3 +97,10 @@ Scenarios:
 * Presionar la lupa, buscar por categoría, checkbox
 * Si el producto está "Out of Stock" no se ve el add to cart
 * Descargar PDF de un producto
+
+
+----
+Move to Element
+https://stackoverflow.com/questions/34562095/scrollintoview-vs-movetoelement
+https://stackoverflow.com/questions/41744368/scrolling-to-element-using-webdriver
+
