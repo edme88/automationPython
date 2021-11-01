@@ -20,6 +20,9 @@ class HeaderPageLocators:
     CURRENCY = (By.CSS_SELECTOR, 'ul.language>li>a')
     EURO = (By.CSS_SELECTOR, 'ul.currency li:nth-of-type(1)>a')
     LIBRAS = (By.CSS_SELECTOR, 'ul.currency li:nth-of-type(2)>a')
+    ## MENU
+    MENU = (By.CSS_SELECTOR, 'section#categorymenu nav')
+    MENU_OPTIONS = (By.CSS_SELECTOR, 'section#categorymenu nav ul>li')
 
 
 class HeaderPage:
@@ -76,3 +79,10 @@ class HeaderPage:
 
     def getSelectLibras(self):
         return self.driver.find_element(*HeaderPageLocators.LIBRAS)
+
+    ## MENU
+    def getMenu(self):
+        return self.driver.find_element(*HeaderPageLocators.MENU)
+
+    def getMenuOptions(self, num):
+        return self.driver.find_element(By.CSS_SELECTOR, '.subnav > ul > li:nth-of-type('+num+') > a')
