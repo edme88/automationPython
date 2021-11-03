@@ -1,28 +1,11 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
-from selenium import webdriver
 from GerkingCourseTAU.Pages.FooterPage import FooterPage
 from GerkingCourseTAU.Pages.ContactUsPage import ContactUsPage
 
-# Constants
-STORE_HOME = 'https://automationteststore.com/'
 
 # Scenarios
 scenarios('../features/ContactUs.feature')
 
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Firefox()
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
-
-# Given Steps
-@given('the Store webPage')
-def go_login_page(browser):
-    browser.get(STORE_HOME)
-    print('Browser is open')
 
 # When Steps
 @when('the user access to contactUs section')

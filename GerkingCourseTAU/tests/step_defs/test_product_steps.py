@@ -2,10 +2,9 @@ import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.chrome.options import Options
 from GerkingCourseTAU.Pages.HeaderPage import HeaderPage
 from GerkingCourseTAU.Pages.ProductPage import ProductPage
-from selenium.webdriver.common.keys import Keys
+
 
 # Constants
 STORE_HOME = 'https://automationteststore.com/'

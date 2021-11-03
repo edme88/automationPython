@@ -1,29 +1,11 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
-from selenium import webdriver
 from GerkingCourseTAU.Pages.ProductPage import ProductPage
 from GerkingCourseTAU.Pages.HeaderPage import HeaderPage
 from selenium.webdriver.common.action_chains import ActionChains
 
-# Constants
-STORE_HOME = 'https://automationteststore.com/'
-
 # Scenarios
 scenarios('../features/CartDropdown.feature')
 
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Firefox()
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
-
-# Given Steps
-@given('the Store webPage')
-def go_login_page(browser):
-    browser.get(STORE_HOME)
-    print('Browser is open')
 
 # When Steps
 @when(parsers.parse('add 2 products("{product1}", "{product2}") to cart'))

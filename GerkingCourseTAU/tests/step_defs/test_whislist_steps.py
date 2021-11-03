@@ -1,31 +1,14 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
-from selenium import webdriver
 from GerkingCourseTAU.Pages.HeaderPage import HeaderPage
 from GerkingCourseTAU.Pages.ProductPage import ProductPage
 from GerkingCourseTAU.Pages.LoginPage import LoginPage
 from GerkingCourseTAU.Pages.WishlistPage import WishlistPage
 from GerkingCourseTAU.Pages.AccountPage import AccountPage
 
-# Constants
-STORE_HOME = 'https://automationteststore.com/'
 
 # Scenarios
 scenarios('../features/Wishlist.feature')
 
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Firefox()
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
-
-# Given Steps
-@given('the Store webPage')
-def go_login_page(browser):
-    browser.get(STORE_HOME)
-    print('Browser is open')
 
 # When Steps
 @when(parsers.parse('the user is login with "{user}" and "{password}"'))
@@ -71,7 +54,3 @@ def product_in_wishlist(browser, productName):
     print(wishlist_page.getTableWish().text)
     assert productName in wishlist_page.getTableWish().text
     print(productName+'is in '+wishlist_page.getTableWish().text)
-
-
-
-

@@ -1,26 +1,9 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
-from selenium import webdriver
 from GerkingCourseTAU.Pages.HeaderPage import HeaderPage
-
-# Constants
-STORE_HOME = 'https://automationteststore.com/'
 
 # Scenarios
 scenarios('../features/Menu.feature')
 
-# Fixtures
-@pytest.fixture
-def browser():
-    b = webdriver.Firefox()
-    b.implicitly_wait(10)
-    yield b
-    b.quit()
-
-# Given Steps
-@given('the Store webPage')
-def go_login_page(browser):
-    browser.get(STORE_HOME)
 
 # When Steps
 @when(parsers.parse('get options in the menu'))
