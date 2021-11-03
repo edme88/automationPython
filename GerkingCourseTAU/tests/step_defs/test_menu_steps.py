@@ -2,12 +2,6 @@ import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
 from selenium import webdriver
 from GerkingCourseTAU.Pages.HeaderPage import HeaderPage
-from GerkingCourseTAU.Pages.ProductPage import ProductPage
-from GerkingCourseTAU.Pages.LoginPage import LoginPage
-from GerkingCourseTAU.Pages.CheckoutPage import CheckoutPage
-from GerkingCourseTAU.Pages.ConfirmationPage import ConfirmationPage
-from GerkingCourseTAU.Pages.AccountPage import AccountPage
-import re
 
 # Constants
 STORE_HOME = 'https://automationteststore.com/'

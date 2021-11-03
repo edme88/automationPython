@@ -95,8 +95,8 @@ Scenarios:
 ----
 ## Otros Escenarios
 * Presionar la lupa, buscar por categoría, checkbox
-* Si el producto está "Out of Stock" no se ve el add to cart
-* Descargar PDF de un producto
+* Home ->Loguearse -> Manage Address Book -> Edit -> Cambiar dirección -> Verificar mensaje verde y nueva dirección
+* Presionar contribute y en nueva página ver el título
 
 
 ----
