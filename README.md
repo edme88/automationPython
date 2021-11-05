@@ -92,6 +92,18 @@ Scenarios:
 ## TAREA
 * Listo (/)
 
+## Run a test and generate report
+python -m pytest -k "Contribute"
+pytest -m -b
+python -m pytest --html=Reportes/EjemploReporte.html
+python -m pytest -k test_contribute_steps
+python -m pytest -k test_contribute_steps --html=EjemploReporte.html
+--self --container
+
+## Run all the test and generate reports
+python -m pytest
+
+
 ----
 ## Otros Escenarios
 * Presionar la lupa, buscar por categoría, checkbox
