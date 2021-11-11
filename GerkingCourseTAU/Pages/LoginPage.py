@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     NAME_INPUT = (By.ID, 'loginFrm_loginname')
     PASSWORD_INPUT = (By.ID, 'loginFrm_password')
     LOGIN_BTN = (By.CSS_SELECTOR, 'button[title="Login"]')

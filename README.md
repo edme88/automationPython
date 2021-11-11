@@ -90,7 +90,7 @@ Scenarios:
   * test_try_create_account
 
 ## TAREA
-* Listo (/)
+
 
 ## Run a test and generate report
 python -m pytest -k "Contribute"
@@ -109,6 +109,9 @@ python -m pytest
 * Presionar la lupa, buscar por categoría, checkbox
 * Home ->Loguearse -> Manage Address Book -> Edit -> Cambiar dirección -> Verificar mensaje verde y nueva dirección
 * Presionar contribute y en nueva página ver el título
+* En la página de la Home, verificar que cada X tiempo se muestre otro testimonio
+* Verificar que el banner sea diferente
+* CLick en contribute... Click en Powered by... Abrir en 2 pestañas diferentes (verificar el titulo de la tab original, verificar el titulo de las otras tabs, la url y el titulo de la página...y cerrar las pestañas)
 
 
 ----

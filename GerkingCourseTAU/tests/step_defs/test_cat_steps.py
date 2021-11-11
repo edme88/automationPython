@@ -3,7 +3,7 @@ from pytest_bdd import scenarios, given, then, parsers
 from colorama import Fore, Back, Style
 
 # Constants
-CAT_API = 'https://catfact.ninja/'
+CAT_API = 'https://catfact.ninja'
 
 # Scenarios
 scenarios('../features/Cat.feature')
@@ -21,7 +21,11 @@ def do_get(urlEndpoint):
     return response
 
 # Then Steps
-@then(parsers.parse('obtain a fact code "{code:d}"'))
+@then(parsers.parse('obtain a fact code "{code:d}"')) #los : es para indicar el formato
 def verify(do_get, code):
     assert do_get.status_code == code
     print(Back.RESET+Fore.RESET+Style.DIM+'Successful response')
+
+#%s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)
+#%d - Integrales
+#%f - Números de punto flotante

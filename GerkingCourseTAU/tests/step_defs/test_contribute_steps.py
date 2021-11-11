@@ -36,4 +36,8 @@ def check_new_url(browser, url_new):
     assert browser.current_url == url_new
     print('The url is: ' + url_new)
 
+@then('close the tab')
+def close_tab(browser):
+    browser.close()
+
 
