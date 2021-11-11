@@ -112,6 +112,10 @@ python -m pytest
 * En la página de la Home, verificar que cada X tiempo se muestre otro testimonio
 * Verificar que el banner sea diferente
 * CLick en contribute... Click en Powered by... Abrir en 2 pestañas diferentes (verificar el titulo de la tab original, verificar el titulo de las otras tabs, la url y el titulo de la página...y cerrar las pestañas)
+* Los BRANDS SCROLLING LIST abrirlos en pestañas nuevas
+
+## TAREA
+Verificar los 4 testimonios
 
 
 ----
