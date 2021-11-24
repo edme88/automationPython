@@ -25,7 +25,7 @@ def scroll_testimonial(browser):
 @then('check testimonial title')
 def check_testimonial_title(browser):
     footer_page = FooterPage(browser)
-    footer_page.getTestimonialTitle().text == 'TESTIMONIALS'
+    assert footer_page.getTestimonialTitle().text == 'TESTIMONIALS'
     print('Check testimonial title')
 
 

@@ -12,7 +12,7 @@ def browser():
     b = webdriver.Firefox()
     b.implicitly_wait(10)
     yield b
-    b.quit()
+    #b.quit()
 
 
 # Given Steps

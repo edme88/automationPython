@@ -8,6 +8,12 @@ class HeaderPageLocators:
     CHECKOUT_BTN = (By.CSS_SELECTOR, 'ul#main_menu_top li[data-id="menu_checkout"]')
     WELCOMEBACK_BTN = (By.CLASS_NAME, 'menu_text')
     LOGIN_REGISTER_BTN = (By.CSS_SELECTOR, 'ul#customer_menu_top>li>a')
+    # MENU OPTIONS
+    BOOK_OPT = (By.CSS_SELECTOR, '.subnav > ul > li:nth-of-type(8) > a')
+    ## SORTED
+    SORT_DROPDOWN = (By.ID, "sort")
+    ## Product list
+    PRODUCTS_TITLE = (By.CSS_SELECTOR, "div.list-inline>div:nth-of-type(1) a.prdocutname")
     ## CART DROPDOWN
     CART_DROPDOWN = (By.CSS_SELECTOR, 'ul.topcart>li>a')
     CART_ELEMENT_1 = (By.CSS_SELECTOR, 'div#top_cart_product_list tr:nth-of-type(1) td.name')
@@ -47,6 +53,20 @@ class HeaderPage:
 
     def getLoginRegisterBtn(self):
         return self.driver.find_element(*HeaderPageLocators.LOGIN_REGISTER_BTN)
+
+    ## MENU OPTIONS
+    def getBookOption(self):
+        return self.driver.find_element(*HeaderPageLocators.BOOK_OPT)
+
+    ## SORTED
+    def getSortDropdown(self):
+        return self.driver.find_element(*HeaderPageLocators.SORT_DROPDOWN)
+
+    def selectSortOption(self, option):
+        if option == "Name A - Z":
+            return self.driver.find_element(By.CSS_SELECTOR, 'option[value="pd.name-ASC"]')
+        elif option == "Name Z - A":
+            return self.driver.find_element(By.CSS_SELECTOR, 'option[value="pd.name-DESC"]')
 
     ## CART DROPDOWN
     def getCartDropdown(self):

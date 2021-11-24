@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+    "title": "Allegiant by Veronica Roth",
+    "image": "paper_cover_allegiant_jpg-100203-250x250.jpg",
+    "price": "7.99",
+    "available": true
+    },
+    {
+    "title": "New French With Ease (1 book + 1 mp3 CD)",
+    "image": "audiocd1_jpg-100195-250x250.jpg",
+    "price": "85.00",
+     "available": true
+    },
+    {
+    "title": "Paper Towns by John Green",
+    "image": "papertowns2_jpg-100201-250x250.jpg",
+    "price": "9.99",
+     "available": true
+    },
+    {
+    "title": "The Miracle Morning: The Not-So-Obvious Secret Guaranteed to Transform Your Life",
+    "image": "paperback1_jpg-100198-250x250.jpg",
+    "price": "16.20",
+     "available": false
+    }
+  ]
+}
