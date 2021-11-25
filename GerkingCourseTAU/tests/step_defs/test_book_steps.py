@@ -17,7 +17,7 @@ def press_book_button(browser):
     print('Click BOOK button')
 
 
-@when(parsers.parse('select order by "{category}"'), target_fixture='do_get')
+@when(parsers.parse('select order by "{category}"'), target_fixture='order_by')
 def order_by(browser, category):
     header_page = HeaderPage(browser)
     # Scroll to selector
@@ -29,13 +29,25 @@ def order_by(browser, category):
 
 
 @then(parsers.parse('the books are sorted'))
-def book_sorted(browser, category):
+def book_sorted(browser, order_by):
     list_product_page = ListOfProductsPage(browser)
 
     file = open('../../Datos/books.json', "r")
     data = file.read()
     obj = json.loads(data)
     list = obj['books']
+    print('Unordered list: ')
+    print(list)
+
+    if order_by == "Price High > Low" or order_by == 'Price Low > High':
+        list.sort(key=lambda x: x["price"])
+        print('Sort by price list: ')
+        print(list)
+
+        if order_by == "Price High > Low":
+            list.reverse()
+            print('Reverse Price list: ')
+            print(list)
 
 
     for i in range(len(list)):

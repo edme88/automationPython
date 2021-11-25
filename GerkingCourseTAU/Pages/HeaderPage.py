@@ -67,6 +67,10 @@ class HeaderPage:
             return self.driver.find_element(By.CSS_SELECTOR, 'option[value="pd.name-ASC"]')
         elif option == "Name Z - A":
             return self.driver.find_element(By.CSS_SELECTOR, 'option[value="pd.name-DESC"]')
+        elif option == "Price High > Low":
+            return self.driver.find_element(By.CSS_SELECTOR, 'option[value="p.price-DESC"]')
+        elif option == "Price Low > High":
+            return self.driver.find_element(By.CSS_SELECTOR, 'option[value="p.price-ASC"]')
 
     ## CART DROPDOWN
     def getCartDropdown(self):

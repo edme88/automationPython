@@ -4,11 +4,19 @@ Feature: When access to book sort by A-Z
   I want to access to book page
   So can display sorted
 
-
-  @Regression
-  Scenario: Sort books A-Z
+  Background:
     Given the Store webPage
     When press book button
-    And select order by "Name A - Z"
+
+  Scenario: Sort books A-Z
+    When select order by "Name A - Z"
+    Then the books are sorted
+
+  Scenario: Sort books Price High > Low
+    When select order by "Price High > Low"
+    Then the books are sorted
+
+  Scenario: Sort books Price Low > High
+    When select order by "Price Low > High"
     Then the books are sorted
 
