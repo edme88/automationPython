@@ -1,5 +1,5 @@
 @Books
-Feature: When access to book sort by A-Z
+Feature: When access to book sort
   As a user
   I want to access to book page
   So can display sorted

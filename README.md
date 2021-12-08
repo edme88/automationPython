@@ -90,6 +90,11 @@ Scenarios:
   * test_try_create_account
 
 ## TAREA
+* Visual testing sobre boton gris-naranja del login
+* Forgot your login - verificar error -mensaje bien - cerrarlo
+
+* En las special/offer ver el cartelito sale y la cantidad de objetos de la página.
+VERIFICAR que al cambiar de moneda, cambia la cookie
 
 
 ## Run a test and generate report
@@ -108,14 +113,12 @@ python -m pytest
 ## Otros Escenarios
 * Presionar la lupa, buscar por categoría, checkbox
 * Home ->Loguearse -> Manage Address Book -> Edit -> Cambiar dirección -> Verificar mensaje verde y nueva dirección
-* Presionar contribute y en nueva página ver el título
-* En la página de la Home, verificar que cada X tiempo se muestre otro testimonio
 * Verificar que el banner sea diferente
-* CLick en contribute... Click en Powered by... Abrir en 2 pestañas diferentes (verificar el titulo de la tab original, verificar el titulo de las otras tabs, la url y el titulo de la página...y cerrar las pestañas)
 * Los BRANDS SCROLLING LIST abrirlos en pestañas nuevas
 
 ## TAREA
-Verificar los 4 testimonios
+En el homepage, verificar los 3 banner... por defecto los botones neck back no son visibles...
+al poner el mouse encima...los botones nect y back se visualizan
 
 
 ----

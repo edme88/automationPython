@@ -20,11 +20,6 @@ def browser():
     yield b
     b.quit()
 
-# Given Steps
-@given('the Store webPage')
-def go_login_page(browser):
-    browser.get(STORE_HOME)
-    print('Browser is open')
 
 # When Steps
 @when(parsers.parse('go to product page of "{product}"'))

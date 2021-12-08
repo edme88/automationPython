@@ -2,6 +2,8 @@ from selenium.webdriver.common.by import By
 
 
 class HeaderPageLocators:
+    #BLUE MENU
+    SPECIAL_BTN = (By.CSS_SELECTOR, 'ul#main_menu_top:nth-of-type(1) li[data-id="menu_specials"] a')
     SEARCH_INPUT = (By.ID, 'filter_keyword')
     SEARCH_BTN = (By.CLASS_NAME, 'fa-search')
     PRODUCT_TITLE = (By.CLASS_NAME, 'bgnone')
@@ -35,6 +37,9 @@ class HeaderPage:
 
     def __init__(self, driver):
         self.driver = driver
+
+    def getSpecialBtn(self):
+        return self.driver.find_element(*HeaderPageLocators.SPECIAL_BTN)
 
     def getSearchInput(self):
         return self.driver.find_element(*HeaderPageLocators.SEARCH_INPUT)
