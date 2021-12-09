@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
+    CLOSE_ALERT = (By.CSS_SELECTOR, 'button[data-dismiss="alert"]')
     NAME_INPUT = (By.ID, 'loginFrm_loginname')
     PASSWORD_INPUT = (By.ID, 'loginFrm_password')
     LOGIN_BTN = (By.CSS_SELECTOR, 'button[title="Login"]')
@@ -16,6 +17,9 @@ class LoginPageLocators:
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
+
+    def getCloseAlert(self):
+        return self.driver.find_element(*LoginPageLocators.CLOSE_ALERT)
 
     def getInputName(self):
         return self.driver.find_element(*LoginPageLocators.NAME_INPUT)

@@ -25,6 +25,4 @@ def flag_sale_displayed(browser):
             assert list_product_page.getSaleNum(i + 1).is_displayed() is True
             print('Sale ' + str(i + 1) + ' is displayed')
 
-
-
     print('All the sales banners are displayed')
